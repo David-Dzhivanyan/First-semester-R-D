@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+	<title>HTML5</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="main-container">
+	<h1>Задача полного рюкзака</h1>
+	<form class="form" id="form">
+		<h3 class="title">Введите число элементов в наборе:</h3>
+		<input class="input" name="count" type="number" value="10" placeholder="2-100" min="2" max="100" required>
+		<h3 class="title">Введите максимальный вес рюкзака:</h3>
+		<input class="input" name="weight" type="number" value="100" placeholder="10-1000" min="10" max="1000" required>
+		<h3 class="title">Выберите алгоритм:</h3>
+		<select class="select" name="algorithm" required>
+			<option value="default">Метод полного перебора</option>
+			<option value="tree">Метод ветвей и границ</option>
+			<option value="dynamic">Динимическое программирование</option>
+			<option value="greedy">Жадный алгоритм</option>
+		</select>
+		<button class="btn" type="submit">Найти оптимальный</button>
+	</form>
+	<div id="result-wrapper" class="hidden">
+		<h3 id="method"></h3>
+		<div>
+			Исходный набор предметов: <span id="items"></span>
+		</div>
+		<div>
+			Максимальный вес рюкзака: <span id="weight"></span>
+		</div>
+		<div>
+			Оптимальный набор: <span id="result"></span>
+		</div>
+		<div>
+			Конечный вес рюкзака: <span id="backpack-weight"></span>
+		</div>
+		<div>
+			Конечная цена товаров: <span id="backpack-price"></span>
+		</div>
+	</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
