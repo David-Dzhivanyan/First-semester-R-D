@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
       break;
     case 'dynamic':
       result = dynamic(items, weight);
-      title = 'Динимическое программирование'
+      title = 'Динамическое программирование'
       break;
     case 'greedy':
       result = greedy(items, weight);
